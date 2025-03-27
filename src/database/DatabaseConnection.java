@@ -1,3 +1,4 @@
+// src/database/DatabaseConnection.java
 package database;
 import java.sql.*;
 
@@ -49,3 +50,12 @@ public class DatabaseConnection {
         }
     }
 }
+
+
+
+
+
+
+
+
+

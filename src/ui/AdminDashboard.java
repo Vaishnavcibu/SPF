@@ -1,3 +1,4 @@
+// ui/AdminDashboard.java
 package ui;
 
 import javax.swing.*;

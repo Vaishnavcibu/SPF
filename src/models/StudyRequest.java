@@ -1,3 +1,4 @@
+// models/StudyRequest.java
 package models;
 import database.DatabaseConnection;
 import java.sql.*;
@@ -17,12 +18,7 @@ public class StudyRequest {
 
     public static void sendRequest(int senderId, int receiverId) {
         try (Connection conn = DatabaseConnection.getConnection()) {
-            String query = "CREATE TABLE IF NOT EXISTS study_requests (" +
-                           "id INT AUTO_INCREMENT PRIMARY KEY, " +
-                           "sender_id INT, receiver_id INT, status VARCHAR(20));";
-            conn.createStatement().executeUpdate(query);
-
-            query = "INSERT INTO study_requests (sender_id, receiver_id, status) VALUES (?, ?, 'pending')";
+            String query = "INSERT INTO study_requests (sender_id, receiver_id, status) VALUES (?, ?, 'pending')";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setInt(1, senderId);
             stmt.setInt(2, receiverId);

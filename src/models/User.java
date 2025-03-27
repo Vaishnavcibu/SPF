@@ -1,3 +1,4 @@
+// models/User.java
 package models;
 import database.DatabaseConnection;
 import java.sql.*;
